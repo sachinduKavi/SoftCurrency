@@ -9,7 +9,7 @@
     <PackageId>SoftCurrency</PackageId>
     <Version>1.0.0</Version>
     <Authors>Sachindu Kavishka</Authors>
-    <Company>Qriomatrix</Company>
+    <Company>Soft Detroits</Company>
     <Description>Lightweight .NET currency conversion library backed by ExchangeRate-API. Supports single and batch conversions with built-in in-memory rate caching.</Description>
     <PackageTags>currency;conversion;exchange-rate;forex;money</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
