@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- NuGet metadata -->
+    <PackageId>SoftCurrency</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Sachindu Kavishka</Authors>
+    <Company>Qriomatrix</Company>
+    <Description>Lightweight .NET currency conversion library backed by ExchangeRate-API. Supports single and batch conversions with built-in in-memory rate caching.</Description>
+    <PackageTags>currency;conversion;exchange-rate;forex;money</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/sachindu-kavishka/SoftCurrency</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/sachindu-kavishka/SoftCurrency</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- CS1573: missing param tag for cancellationToken (intentionally omitted as self-evident) -->
+    <!-- CS1591: missing XML comment on Dispose() (IDisposable pattern) -->
+    <NoWarn>CS1573;CS1591</NoWarn>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

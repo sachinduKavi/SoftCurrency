@@ -1,0 +1,46 @@
+# Build output
+bin/
+obj/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+.nuget/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# Test results
+TestResults/
+*.trx
+*.coveragexml
+coverage*/
+
+# dotnet publish output
+publish/
+
+# Secrets — never commit these
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

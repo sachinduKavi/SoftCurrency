@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SoftCurrency/SoftCurrency.csproj" />
+  <Project Path="SoftCurrency.Tests/SoftCurrency.Tests.csproj" />
+</Solution>
