@@ -1,4 +1,4 @@
-name: Publish
+name: Publish NuGet Package
 
 on:
   push:
@@ -14,15 +14,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # 1. Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-dotnet@v4
+      # 2. Setup .NET
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
 
-      - run: dotnet restore
-      - run: dotnet pack -c Release
+      # 3. Restore dependencies
+      - name: Restore dependencies
+        run: dotnet restore
 
-      - run: dotnet nuget push "**/*.nupkg" \
-          --source https://api.nuget.org/v3/index.json \
-          --skip-duplicate
+      # 4. Build project (Release)
+      - name: Build
+        run: dotnet build -c Release --no-restore
+
+      # 5. Pack NuGet package
+      - name: Pack
+        run: dotnet pack -c Release --no-build
+
+      # 6. Push to NuGet (Trusted Publishing compatible)
+      - name: Push package to NuGet
+        run: dotnet nuget push "**/*.nupkg" --source https://api.nuget.org/v3/index.json --skip-duplicate
